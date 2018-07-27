@@ -33,19 +33,19 @@
 				</tr>
 				<tr >
 					<td align="right">Name</td>
-					<td><input type="text" name="user_name1" value='<?php echo $f_name; ?>'></td>
+					<td><input type="text" name="name" value='<?php echo $f_name; ?>'></td>
 				</tr>
 				<tr >
 					<td align="right">Country</td>
-					<td><input type="text" name="father_name1" value='<?php echo $f_country; ?>'></td>
+					<td><input type="text" name="country" value='<?php echo $f_country; ?>'></td>
 				</tr >
 				<tr>
 					<td align="right">Phone</td>
-					<td><input type="text" name="school_name1" value='<?php echo $f_phone; ?>'></td>
+					<td><input type="text" name="phone" value='<?php echo $f_phone; ?>'></td>
 				</tr>
 				<tr >
 					<td align="right">Address</td>
-					<td><input type="text" name="roll_no1" value='<?php echo $f_address; ?>'></td>
+					<td><input type="text" name="address" value='<?php echo $f_address; ?>'></td>
 				</tr>
 				
 				<tr>
