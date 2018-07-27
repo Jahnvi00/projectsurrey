@@ -41,50 +41,41 @@
 	</body>
 </html>
 <?php
-/*$conn=mysql_connect("localhost","root","");
-$db= mysql_select_db("",$conn);*/
 
-/*$conn=mysqli_connect("localhost","root","");
-$db=mysqli_select_db($conn,"students");*/
 
 include('config.php');
  
  if (isset($_POST['submit']))
  {
- $student_name=$_POST['user_name'];
- $student_father=$_POST['father_name'];
- $student_school=$_POST['school_name'];
- $student_roll=$_POST['roll_no'];
- $student_class=$_POST['class_name'];
- 
- if($student_name=='')
+ $food_name=$_POST['name'];
+ $food_country=$_POST['country'];
+ $food_phone=$_POST['phone'];
+ $food_address=$_POST['address'];
+
+ if($food_name=='')
  {
 	echo "<script>window.open('index.php?name=name is required','_self');</script>";
 	exit();
  }
- if($student_father=='')
+ if($food_country=='')
  {
-	echo "<script>window.open('index.php?father=father's name is required','_self');</script>";
+	echo "<script>window.open('index.php?country=country is required','_self');</script>";
 	exit();
  }
-if($student_school=='')
+if($food_phone=='')
  {
-	echo "<script>window.open('index.php?school= school name is required','_self');</script>";
+	echo "<script>window.open('index.php?phone=phone is required','_self');</script>";
 	exit();
  }
-if($student_roll=='')
+if($food_address=='')
  {
-	echo "<script>window.open('index.php?roll=roll no. is required','_self');</script>";
+	echo "<script>window.open('index.php?address=address is required','_self');</script>";
 	exit();
  }
- if($student_class=='null')
- {
-	echo "<script>window.open('index.php?class=class is required','_self');</script>";
-	exit();
- }
+ 
 
 	 
-	 $tsql="insert into u_reg (username,fname,rollno)values('$student_name','$student_father','$student_roll')";
+	 $tsql="insert into food (name,country,phone,address)values('$food_name','$food_country','$food_phone','$food_address')";
 $getResults= sqlsrv_query($conn, $tsql);
 	 
 
@@ -92,7 +83,7 @@ $getResults= sqlsrv_query($conn, $tsql);
 //if($conn->query($que)=== true)
 //{
 	echo "<center><b>The follwing Data has been inserted into our databse:</b></center>";
-	echo "<table width='500px'align='center' border='4'><tr><td>$student_name</td><td>$student_father</td><td>$student_school</td><td>$student_roll</td><td>$student_class</td></tr></table>";                      
+	echo "<table width='500px'align='center' border='4'><tr><td>$food_name</td><td>$food_country</td><td>$food_phone</td><td>$food_address</td></tr></table>";                      
 //}
 
 
