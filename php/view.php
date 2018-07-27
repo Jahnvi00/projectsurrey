@@ -17,9 +17,10 @@
 			</tr>
 			<tr align="center">
 				<td>Serial No.</td>
-				<td>Student's Name</td>
-				<td>Father's Name</td>
-				<td>Roll No.</td>
+				<td> Name</td>
+				<td>Country</td>
+				<td>Phone</td>
+				<td>Address</td>
 				<td>Delete</td>
 				<td>Edit</td>
 				<td>Detail</td>
@@ -28,28 +29,29 @@
 			<?php
 			
 			include('config.php');
-			$sqlselect="SELECT * FROM dbo.u_reg";
+			$sqlselect="SELECT * FROM dbo.food";
 			$getResults= sqlsrv_query($conn, $sqlselect);
 				
 				$i=1;
 		
 		while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) 
 			{
-			 $user_name = $row['username'];
-					$father_name=$row['fname'];
-					$roll_no=$row['rollno'];
+			 $f_name = $row['name'];
+					$f_country=$row['country'];
+					$f_phone=$row['phone'];
+			$f_address=$row['address'];
 			
-			
-			//echo ($row['id'] . " " . $row['username']. . PHP_EOL);
+			//echo ($row['id'] . " " . $row['name']. . PHP_EOL);
 			
 				
 					
 			?>
 				<tr align="center">
 				<td><?php echo $i;$i++; ?></td>
-				<td><?php echo $user_name; ?></td>
-				<td><?php echo $father_name; ?></td>
-				<td><?php echo $roll_no; ?></td>
+				<td><?php echo $f_name; ?></td>
+				<td><?php echo $f_country; ?></td>
+				<td><?php echo $f_phone; ?></td>
+					<td><?php echo $f_address; ?></td>
 				<td><a href ='delete.php?del=<?php echo $roll_no; ?>'>Delete</a></td>
 				<td><a href='edit.php?edit=<?php echo $roll_no ?>'>Edit</a></td>
 				<td><a href='view.php?detail=<?php echo $u_id ?>'>Detail</a></td>
