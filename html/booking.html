@@ -1,0 +1,205 @@
+<html>
+    <head>
+        <title>The Surrey</title>
+        <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    	<link rel="stylesheet" href="css/style.css" type="text/css">
+    
+
+    <body>
+	<div id="page">
+		<div id="header">
+			<div class="background">
+                <h1 id="logo"> <a href="index.html">The Surrey</a> </h1>
+				<div id="navigation">
+					<ul>
+						<li class="selected">
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="menu.html">Menu</a>
+						</li>
+						
+						<li>
+							<a href="room.html">Rooms</a>
+						</li>
+                        <li>
+							<a href="booking.html">Bookings</a>
+						</li>
+						
+						<li>
+							<a href="contact.html">Contact</a>
+						</li>
+                      
+					</ul>
+				</div>
+			</div>
+		</div>
+        <script>
+             window.alert("Welcome to Booking Form ");
+            function cdate()
+            
+              {
+                var today=new Date();
+                var thisDay=today.getDate();
+                var thisMonth=today.getMonth()+1;
+                var thisYear=today.getFullYear();
+                return thisMonth+"/"+thisDay+"/"+thisYear;
+            }
+            
+            function sform()
+            {
+                document.emp.id.value=cdate();
+                document.emp.abhi.focus();
+            }
+            function vform()
+            {
+                var id=document.emp.a.value;
+                var x=document.emp.email_id.value;
+                var no=document.emp.contact.value;
+                var validity=document.emp.salary.value;
+                var atposition=x.indexOf ("@");
+                var dotposition=x.lastIndexOf(".");
+            
+            if(id==null|| id=="")
+                {
+                    alert("Booking Form");
+                    return false;
+                }
+                else if (isNaN(id))
+                    {
+                        document.getElementById("numlock").innerHTML="Enter Numaric Value";
+                        return false;
+                    }
+                else if(atposition<1 || dotposition<atposition || dotposition+2>=x.length)
+                        {
+                        alert ("please enter valid address")  ;
+                            return false;
+                        }
+                else if (no.length<10)
+                    {
+                        alert("Contact number should not contain less than 10 digit");
+                        return false;
+                    }
+                 else if (validity.length<=1)
+                    {
+                        alert("Validity should contain more than 1 digit");
+                        return false;
+                    }
+
+                 else
+                    {
+                        alert("SUCESSFULLY REGESTERED ");
+                        return true;
+                    }
+            }
+            function upper()
+            {
+                var y =document.emp.firstname;
+                y.value=y.value.toUpperCase();
+            }
+            function upperr()
+            {
+                var y =document.emp.lastname;
+                y.value=y.value.toUpperCase();
+            }
+            function get()
+            {
+                if(document.emp.mydropdown.selectedIndex==6)
+                    {
+                        document.emp.other.value=prompt("Enter the other location name","Enter location name");
+                        
+                    }
+            
+            }
+     </script>
+        </div>
+        </body>
+    </head>
+ 
+<body bgcolor="white" onload="sform()">
+<form name="emp" onsubmit="return vform()">
+<table  align="center" cellspacing="2" cellpadding="2" border="7" width="50%" heigth="100%">
+<tr>
+        <td colspan="2" align="center"><b> Booking Form</b></td>
+        
+    </tr>
+<tr >
+        
+       <td align="left"> <u> Current Date </u></td>
+<td>
+ <input type="text" align="center" value="" name="id" size="24"> </td>
+    </tr>
+    
+<tr >
+ 
+        <td align="left" valign="top" width="41%"><u> Email Id </u><span style="color:red">*</span></td>
+        <td width="57%">
+        <input type="text" value="" name="a" size="24"><span id="numlock"></span></td>
+    </tr>
+    
+    <tr>
+        <td align="left" valign="top" width="41%"><u>First Name</u></td>
+ 
+        <td width="57%"><input type="text" value="" name="firstname" size="24" onblur=upper()></td>
+    </tr>
+    <tr>
+        <td align="left" valign="top" width="41%"><u>Last Name</u></td>
+        <td width="57%">
+        <input type="text" value="" name="lastname" size="24" onblur="upper()"></td>
+    </tr>
+<tr>
+        <td align="left" valign="top" width="41%"> <u> Address </u></td>
+ 
+        <td width="57%"><textarea rows="4" maxlen="200" name="address" cols="20"></textarea></td>
+    </tr>
+<tr>
+        <td align="left" valign="top" width="41%"> <u> Email </u><span style="color:white">*</span></td>
+        <td width="57%">
+        <input type="text" value="" name="email_id" size="24"></td>
+    </tr>
+    <tr >
+ 
+        <td align="left" valign="top" width="41%"><u> Phone Number </u><span style="color:white">*</span></td>
+        <td width="57%">
+        <input type="text" value="" name="contact" size="24"></td>
+    </tr>
+<tr >
+ 
+        <td align="left" valign="top" width="41%"><u> Validity </u></td>
+        <td width="57%">
+        <input type="text" value="" name="salary" size="24"></td>
+    </tr>
+    <tr >
+        <td align="left" valign="top" width="41%"> <u> Location </u></td>
+        <td width="57%"><select name="mydropdown" onblur="get()">
+<option value="Default">Default</option>
+<option value="Canada">Ludhiana</option>
+<option value="New York">Delhi</option>
+
+ 
+</select></td>
+        
+ 
+    </tr>
+    <tr>
+<td align="left" valign="top" width="41%"> <u> Other </u></td>
+        <td width="57%">
+        <input type="text" value="" name="other" size="24"></td>
+    </tr>
+ 
+
+    
+    
+    <tr>
+        <td colspan="2">
+        <p align="center">
+        <input type="submit" value="  Submit" name="B4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="  Reset All   " name="B5"></td>
+    </tr>
+ 
+</table>
+</form>
+</body>
+</html>
+    
