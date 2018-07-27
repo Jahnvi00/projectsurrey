@@ -1,5 +1,5 @@
 <?php
-		$serverName = "surrey";
+		$serverName = "thesurrey.database.windows.net";
 $connectionOptions = array(
     "Database" => "surrey",
     "Uid" => "thesurey",
