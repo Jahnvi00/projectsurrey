@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Registration Form</title>
+		<title>Booking Form</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	
@@ -11,32 +11,25 @@
 		<form method="POST" action="index.php">
 			<table  border="0" align="center">
 				<tr>	
-					<th colspan="6"><h1>Student's Registration Form</h1></th>
+					<th colspan="6"><h1>Booking Form</h1></th>
 				</tr>
 				<tr >
 					<td align="right"><label>Name:</label></td>
-					<td><input type="text" name="user_name"><font color="red"><?php echo @$_GET['name']; ?></font></td>
+					<td><input type="text" name="name"><font color="red"><?php echo @$_GET['name']; ?></font></td>
 				</tr>
 				<tr >
-					<td align="right"><label>Father's Name:</label></td>
-					<td><input type="text" name="father_name"><font color="red"><?php echo @$_GET['father']; ?></font></td>
+					<td align="right"><label>Country:</label></td>
+					<td><input type="text" name="country"><font color="red"><?php echo @$_GET['country']; ?></font></td>
 				</tr >
 				<tr>
-					<td align="right"><label>School's Name:</label></td>
-					<td><input type="text" name="school_name"><font color="red"><?php echo @$_GET['school']; ?></font></td>
+					<td align="right"><label>Phone:</label></td>
+					<td><input type="text" name="phone"><font color="red"><?php echo @$_GET['phone']; ?></font></td>
 				</tr>
 				<tr >
-					<td align="right"><label>Roll No:</label></td>
-					<td><input type="text" name="roll_no"><font color="red"><?php echo @$_GET['roll']; ?></font></td>
+					<td align="right"><label>Address:</label></td>
+					<td><input type="text" name="address"><font color="red"><?php echo @$_GET['address']; ?></font></td>
 				</tr>
-				<tr >
-					<td align="right"><label>Class:</label></td>
-					<td><select name="class_name">
-						<option value='null'>Class</option>
-						<option value='9th'>9th</option>
-						<option value='10th'>10th</option>
-					</select><font color="red"><?php echo @$_GET['class']; ?></font></td>
-				</tr>
+				
 				<tr>
 					<td colspan="5" align="center"><input type="submit" value="Submit" name="submit"></td>
 				</tr>
@@ -49,7 +42,7 @@
 </html>
 <?php
 /*$conn=mysql_connect("localhost","root","");
-$db= mysql_select_db("students",$conn);*/
+$db= mysql_select_db("",$conn);*/
 
 /*$conn=mysqli_connect("localhost","root","");
 $db=mysqli_select_db($conn,"students");*/
