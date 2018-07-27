@@ -2,7 +2,7 @@
 		$serverName = "thesurrey.database.windows.net";
 $connectionOptions = array(
     "Database" => "surrey",
-    "Uid" => "thesurey",
+    "Uid" => "thesurrey",
     "PWD" => "Vickynidhi00"
 );
 //Establishes the connection
