@@ -1,9 +1,9 @@
 <?php
-		$serverName = "studentserv.database.windows.net";
+		$serverName = "surrey";
 $connectionOptions = array(
-    "Database" => "studentsdb",
-    "Uid" => "ravdeep",
-    "PWD" => "Like@1234"
+    "Database" => "surrey",
+    "Uid" => "thesurey",
+    "PWD" => "Vickynidhi00"
 );
 //Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
