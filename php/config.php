@@ -2,7 +2,7 @@
 		$serverName = "mall.database.windows.net";
 $connectionOptions = array(
     "Database" => "acer",
-    "Uid" => "",
+    "Uid" => "acer",
     "PWD" => "#Jahnvi00"
 );
 //Establishes the connection
