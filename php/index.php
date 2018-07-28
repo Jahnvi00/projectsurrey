@@ -75,7 +75,7 @@ if($food_address=='')
  
 
 	 
-	 $tsql="insert into food (name,country,phone,address)values('$food_name','$food_country','$food_phone','$food_address')";
+	 $tsql="insert into work (name,country,phone,address)values('$food_name','$food_country','$food_phone','$food_address')";
 $getResults= sqlsrv_query($conn, $tsql);
 	 
 
