@@ -29,7 +29,7 @@
 			<?php
 			
 			include('config.php');
-			$sqlselect="SELECT * FROM dbo.food";
+			$sqlselect="SELECT * FROM dbo.work";
 			$getResults= sqlsrv_query($conn, $sqlselect);
 				
 				$i=1;
