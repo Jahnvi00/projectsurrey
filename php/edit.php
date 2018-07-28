@@ -2,7 +2,7 @@
 	include('config.php');
 	
 	$edit_record=$_GET['edit'];
-	$query1="SELECT * FROM dbo.food WHERE id='$edit_record'";
+	$query1="SELECT * FROM dbo.work WHERE id='$edit_record'";
 	$getResults= sqlsrv_query($conn,$query1);
 
 
@@ -69,8 +69,8 @@
 		$food_address=$_POST['address'];
 		
 		
-		$query2="UPDATE dbo.food SET username='$food_name',name='$food_country',country='$food_phone' WHERE id='$edit_record1'";
-		//Update dbo.food set username='jahnvi',name='dhand',id='the surrey'where id='the surrey';
+		$query2="UPDATE dbo.work SET username='$food_name',name='$food_country',country='$food_phone' WHERE id='$edit_record1'";
+		//Update dbo.work set username='jahnvi',name='dhand',id='acer'where id='acer';
 		$getResult1=sqlsrv_query($conn, $query2);
 		
 		echo "<script>";
